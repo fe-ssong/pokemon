@@ -1,4 +1,5 @@
 import { useDispatch, useSelector } from "react-redux"
+import { favoriteSlice } from "../RTK/slice"
 
 export default function FavoriteButton({ pokemonId }) {
     const isFavorite = useSelector(state => state.favorite.some((item => item === pokemonId)))
@@ -8,7 +9,6 @@ export default function FavoriteButton({ pokemonId }) {
             e.stopPropagation()
             dispatch(isFavorite ? favoriteSlice.actions.removeFromFavorite({pokemonId})
              : favoriteSlice.actions.addToFavorite({pokemonId}))
-             action.payload.pokemonId = 1
         }}
         className={isFavorite ? "text-[red]" : ''}>
         {isFavorite ?'♥' : '♡'}

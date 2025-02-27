@@ -1,7 +1,8 @@
 import { useNavigate } from "react-router-dom"
 import styled from "styled-components"
 import FavoriteButton from "./FavoriteButton"
-import { memo } from "react"
+import { memo, useState } from "react"
+
 
 const CardContainer = styled.section`
     width: 150px;

@@ -6,7 +6,7 @@ export default function Favorite() {
     const pokemon = useSelector(selectFavoritePokemons)
     return (
         <>
-            {pokemon.map(el => <Card key={el.id} pokemons={el} />)}
+            {pokemon.map(el => <Card key={el.id} pokemon={el} />)}
         </>
     )
 }

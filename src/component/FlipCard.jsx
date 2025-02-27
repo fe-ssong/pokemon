@@ -7,8 +7,9 @@ const FlipImageContainer = styled.div`
     position: relative;
     transform-style: preserve-3d;
     transition: 0.5s;
-    transform: ${props => props.flipped ? 'rotateY(180deg)' : 'rotateY(0deg)'}
-`
+    transform: ${props => props.flipped ? 'rotateY(180deg)' : 'rotateY(0deg)'};
+`;
+
 const FrontImage = styled.img`
     width: 100%;
     height: 100%;
@@ -20,7 +21,7 @@ const BackImage = styled.img`
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    transform: rotateY(180deg)
+    transform: rotateY(180deg);
     
 `
 

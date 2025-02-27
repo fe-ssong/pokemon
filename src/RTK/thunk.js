@@ -13,12 +13,12 @@ export const fetchMultiplePokemonById = createAsyncThunk(
       
       const pokemonData = {
         id: pokemonId,
-        name: data.names.find(el.language.name === 'ko').name,
+        name: data.names.find(el => el.language.name === 'ko').name,
         description: data.flavor_text_entries.find(el => el.language.name === 'ko').flavor_text,
         front: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonId}.png`,
         back: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/${pokemonId}.png`,
       }
-      console.log(pokemonData)
+      
       return pokemonData
 
     }
