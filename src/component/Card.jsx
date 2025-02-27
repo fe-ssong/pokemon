@@ -27,7 +27,7 @@ const CardContainer = styled.section`
         const navigate = useNavigate()
         return (
             <CardContainer onClick={() => navigate(`/detail/${pokemon.id}`)}>
-                {isImageLoading ? <div className="w-[120px] h-[120px] leading-[120px] text-center">
+                {isImageLoading ? <div className="w-[160px] h-[160px] leading-[160px] text-center">
                     로딩중...</div> : null}
                 <img onLoad={() => setIsImageLoading(false)}
                     src={pokemon.front} style={{display: isImageLoading ? 'none' : 'block'}} />
