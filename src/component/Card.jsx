@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom"
-import styled from "styled-components"
+import styled from "styled-components";
 import FavoriteButton from "./FavoriteButton"
 import { memo, useState } from "react"
 
@@ -20,7 +20,7 @@ const CardContainer = styled.section`
     img {
         width: 120px;
     }
-    `
+    `;
 
     export const Card = memo( ({pokemon}) => {
         const [isImageLoading, setIsImageLoading] = useState(true)
